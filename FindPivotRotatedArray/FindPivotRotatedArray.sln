@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FindPivotRotatedArray", "FindPivotRotatedArray\FindPivotRotatedArray.vcxproj", "{E26EAAF2-A08C-4C3B-9BA3-342B3C62FE34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E26EAAF2-A08C-4C3B-9BA3-342B3C62FE34}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E26EAAF2-A08C-4C3B-9BA3-342B3C62FE34}.Debug|Win32.Build.0 = Debug|Win32
+		{E26EAAF2-A08C-4C3B-9BA3-342B3C62FE34}.Release|Win32.ActiveCfg = Release|Win32
+		{E26EAAF2-A08C-4C3B-9BA3-342B3C62FE34}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
