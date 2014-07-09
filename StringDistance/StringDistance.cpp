@@ -7,11 +7,11 @@ int min(unsigned int a, unsigned int b, unsigned int c)
 	return std::min(std::min(a, b), c);
 }
 
-void print(int**m, int r, int c)
+void print(int**m, size_t r, size_t c)
 {
-	for (auto i = 0; i < r; ++i)
+	for (size_t i = 0; i < r; ++i)
 	{
-		for (auto j = 0; j < c; ++j)
+		for (size_t j = 0; j < c; ++j)
 		{
 			if (m[i][j] < 10)
 			{
@@ -29,20 +29,20 @@ int stringDistance(std::string s1, std::string s2)
 {
 	int **m = (int**)malloc((s1.length() + 1) * sizeof(int));
 
-	for (auto i = 0; i <= s1.length(); ++i)
+	for (size_t i = 0; i <= s1.length(); ++i)
 	{
 		m[i] = (int*)malloc((s2.length() + 1) * sizeof(int));
 		m[i][0] = i;
 	}
 
-	for (auto i = 0; i <= s2.length(); ++i)
+	for (size_t i = 0; i <= s2.length(); ++i)
 	{
 		m[0][i] = i;
 	}
 
-	for (auto i = 1; i <= s1.length(); ++i)
+	for (size_t i = 1; i <= s1.length(); ++i)
 	{
-		for (auto j = 1; j <= s2.length(); ++j)
+		for (size_t j = 1; j <= s2.length(); ++j)
 		{
 			auto cost = 0;
 			

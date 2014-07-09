@@ -3,12 +3,12 @@
 
 int largestSequenceRepeatedCharacters(std::string s)
 {
-	int largestSequenceSize = 0;
-	int i = 0;
+	size_t largestSequenceSize = 0;
+	size_t i = 0;
 
 	while (i < s.length())
 	{
-		int posStart = i;
+		size_t posStart = i;
 		++i;
 
 		while (i < s.length() && s[i] == s[posStart])

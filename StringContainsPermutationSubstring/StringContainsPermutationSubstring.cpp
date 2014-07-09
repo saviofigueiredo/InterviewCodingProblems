@@ -5,19 +5,19 @@ bool StringContainsPermutationSubstring(std::string s1, std::string s2)
 {
 	int v[256];
 
-	for (auto i = 0; i < 256; ++i)
+	for (size_t i = 0; i < 256; ++i)
 	{
 		v[i] = 0;
 	}
 
-	for (auto i = 0; i < s2.length(); ++i)
+	for (size_t i = 0; i < s2.length(); ++i)
 	{
 		v[s2[i]]++;
 	}
 
-	for (int i = 0; i < s1.length(); ++i)
+	for (size_t i = 0; i < s1.length(); ++i)
 	{
-		for (int j = i; j < s2.length() && j < s1.length(); ++j)
+		for (size_t j = i; j < s2.length() && j < s1.length(); ++j)
 		{
 			v[s1[j]]--;
 		}
@@ -37,7 +37,7 @@ bool StringContainsPermutationSubstring(std::string s1, std::string s2)
 			return true;
 		}
 
-		for (int j = i; j < s2.length() && j < s1.length(); ++j)
+		for (size_t j = i; j < s2.length() && j < s1.length(); ++j)
 		{
 			v[s1[j]]++;
 		}

@@ -25,7 +25,7 @@ int findIndex(std::string s, int number)
 		--count;
 	}
 
-	return pos;
+	return int(pos);
 }
 
 int main(int argc, char* argv[])

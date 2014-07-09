@@ -5,7 +5,7 @@ typedef struct Node
 	Node* left;
 	Node* right;
 	int data;
-};
+}Node;
 
 void printKDistanceMoveDown(Node* node, int k)
 {

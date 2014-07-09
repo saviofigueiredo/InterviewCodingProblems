@@ -3,7 +3,7 @@
 const unsigned PrimeBase = 257;
 const unsigned PrimeMod = 1000000007;
 
-unsigned hash(char* s)
+long long hash(char* s)
 {
 	long long hash = 0;
 
@@ -60,4 +60,6 @@ int main(int argc, char* argv[])
 	char pattern[] = "hash";
 
 	std::cout << rabinKarp(pattern, s);
+
+	return EXIT_SUCCESS;
 }

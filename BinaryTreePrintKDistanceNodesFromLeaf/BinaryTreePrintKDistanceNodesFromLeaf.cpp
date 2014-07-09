@@ -6,7 +6,7 @@ typedef struct Node
 	Node* left;
 	Node* right;
 	int data;
-};
+}Node;
 
 int printKDistancesFromLeaf(Node* root, int k)
 {

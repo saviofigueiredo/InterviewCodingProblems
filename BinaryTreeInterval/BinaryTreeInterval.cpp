@@ -47,11 +47,11 @@ Interval* intervalSearch(Node* root, Interval interval)
 
 	if (root->left != nullptr && root->left->max >= interval.low)
 	{
-		intervalSearch(root->left, interval);
+		return intervalSearch(root->left, interval);
 	}
 	else
 	{
-		intervalSearch(root->right, interval);
+		return intervalSearch(root->right, interval);
 	}
 
 }

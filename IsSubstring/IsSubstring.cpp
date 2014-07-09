@@ -2,11 +2,11 @@
 
 bool isSubstring(std::string s1, std::string s2)
 {
-	for (auto startPosS1 = 0; startPosS1 < s1.length(); ++startPosS1)
+	for (size_t startPosS1 = 0; startPosS1 < s1.length(); ++startPosS1)
 	{
-		int i = startPosS1;
+		size_t i = startPosS1;
 		bool areEqual = true;
-		int j = 0;
+		size_t j = 0;
 		while (j < s2.length() && i < s1.length())
 		{
 			if (s1[i++] != s2[j++])
@@ -31,17 +31,17 @@ bool isSubstringFast(std::string s1, std::string s2)
 	long long hashS1 = 0, hashS2 = 0;
 
 	long long pow = 1;
-	for (int i = 0; i < s2.length() - 1; ++i)
+	for (size_t i = 0; i < s2.length() - 1; ++i)
 	{
 		pow *= factor;
 	}
 
-	for (int i = 0; i < s2.length(); ++i)
+	for (size_t i = 0; i < s2.length(); ++i)
 	{
 		hashS2 = hashS2*factor + s2[i];
 	}
 
-	for (int i = 0; i < s1.length(); ++i)
+	for (size_t i = 0; i < s1.length(); ++i)
 	{
 		if (i >= s2.length())
 		{

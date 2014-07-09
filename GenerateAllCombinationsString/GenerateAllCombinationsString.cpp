@@ -27,11 +27,11 @@ std::vector<std::string> generateAllCombinations(std::string s)
 
 	combinations = generateAllCombinations(s);
 
-	for (int i = 0; i < combinations.size(); ++i)
+	for (size_t i = 0; i < combinations.size(); ++i)
 	{
 		std::string combination = combinations[i];
 
-		for (int j = 0; j <= combination.size(); ++j)
+		for (size_t j = 0; j <= combination.size(); ++j)
 		{
 			std::string left = combination.substr(0, j);
 			std::string right = combination.substr(j, combination.size() - j);

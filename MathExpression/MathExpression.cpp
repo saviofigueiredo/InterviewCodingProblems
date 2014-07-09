@@ -6,7 +6,7 @@ bool isValid(std::string expression)
 {
 	std::stack<char> stk;
 
-	for (auto i = 0; i < expression.length(); ++i)
+	for (size_t i = 0; i < expression.length(); ++i)
 	{
 		auto c = expression.at(i);
 
@@ -38,5 +38,7 @@ bool isValid(std::string expression)
 
 int main(int argc, char* argv[])
 {
-
+	/*
+	Still need to finish the isValid method.
+	*/
 }

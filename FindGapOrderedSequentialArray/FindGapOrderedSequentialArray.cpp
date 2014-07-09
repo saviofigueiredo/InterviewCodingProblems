@@ -37,6 +37,8 @@ int findGap(int v[], int length)
 			end = mid - 1;
 		}
 	}
+
+	return -1;
 }
 
 int _tmain(int argc, _TCHAR* argv[])

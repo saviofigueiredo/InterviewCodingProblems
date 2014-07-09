@@ -63,7 +63,7 @@ typedef struct Radio
 			auto station = (Station*)malloc(sizeof(Station));
 
 			station->id = i + 1;
-			station->strength = rand() % 30;
+			station->strength = float(rand() % 30);
 
 			newRadio->stations.push_back(station);
 		}

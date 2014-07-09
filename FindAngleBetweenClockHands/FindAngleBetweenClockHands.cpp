@@ -8,9 +8,9 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	int minutes = 30, hours = 1;
 
-	float angleMinutes = (360/60)*minutes;
+	float angleMinutes = float((360/60)*minutes);
 
-	float angleHours = (360/12)*hours + minutes/2;
+	float angleHours = float((360/12)*hours + minutes/2);
 
 	float answer = angleHours - angleMinutes;
 

@@ -39,10 +39,10 @@ This left hand on wall algorithm can be simplified into these simple conditions:
 #include <iostream>
 #include <list>
 
-const char Wall = 219;
-const char Robot = 1;
-const char Empty = 177;
-const char Door = 178;
+const unsigned char Wall = 219;
+const unsigned char Robot = 1;
+const unsigned char Empty = 177;
+const unsigned char Door = 178;
 
 enum Direction
 {
@@ -221,10 +221,10 @@ typedef struct Maze
 
 	void print()
 	{
-		const char Right = 175;
-		const char Left = 174;
-		const char Up = 30;
-		const char Down = 31;
+		unsigned const char Right = 175;
+		unsigned const char Left = 174;
+		unsigned const char Up = 30;
+		unsigned const char Down = 31;
 
 		if (robotDirection == up) board[robotLine][robotColumn] = Up;
 		if (robotDirection == down) board[robotLine][robotColumn] = Down;
@@ -252,4 +252,6 @@ int main(int argc, char* argv[])
 	auto maze = Maze::newMaze();
 
 	maze->solve();
+
+	return EXIT_SUCCESS;
 }

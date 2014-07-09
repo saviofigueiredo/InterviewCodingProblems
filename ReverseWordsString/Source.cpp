@@ -3,14 +3,14 @@
 
 void reverse(std::string& s)
 {
-	for (auto i = 0; i < s.length()/2; ++i)
+	for (size_t i = 0; i < s.length()/2; ++i)
 	{
 		auto temp = s[i];
 		s[i] = s[s.length() - i - 1];
 		s[s.length() - i - 1] = temp;
 	}
 
-	for (int posInicio = 0, i = 0; i < s.length(); ++i)
+	for (size_t posInicio = 0, i = 0; i < s.length(); ++i)
 	{
 		while (i < s.length() && s[i] == ' ')
 		{
@@ -26,7 +26,7 @@ void reverse(std::string& s)
 
 		int posFim = i;
 
-		for (int j = posInicio; j < posInicio + (posFim - posInicio)/2; ++j)
+		for (size_t j = posInicio; j < posInicio + (posFim - posInicio)/2; ++j)
 		{
 			char temp = s[j];
 			s[j] = s[posInicio + posFim - j - 1];

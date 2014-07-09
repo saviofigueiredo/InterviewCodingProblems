@@ -8,7 +8,7 @@ std::list<std::string> getWordsFromString(std::string s)
 {
 	std::list<std::string> words;
 
-	for (auto i = 0; i < s.length(); ++i)
+	for (size_t i = 0; i < s.length(); ++i)
 	{
 		while (i < s.length() && s[i] == ' ')
 		{
@@ -52,7 +52,7 @@ bool isAnagram(std::string s1, std::string s2)
 
 	std::unordered_map<char, int> lettersCount;
 
-	for (auto i = 0; i < s1.length(); ++i)
+	for (size_t i = 0; i < s1.length(); ++i)
 	{
 		if (lettersCount.find(s1[i]) == lettersCount.end())
 		{
@@ -64,7 +64,7 @@ bool isAnagram(std::string s1, std::string s2)
 		}
 	}
 
-	for (auto i = 0; i < s2.length(); ++i)
+	for (size_t i = 0; i < s2.length(); ++i)
 	{
 		if (lettersCount.find(s2[i]) == lettersCount.end() || lettersCount[s2[i]] == 0)
 		{

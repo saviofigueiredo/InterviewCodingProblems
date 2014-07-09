@@ -28,7 +28,7 @@ int smallestNumberAllDigitsMultipliedEqualNumber(int n)
 
 	for (auto i = 0; i < pos; ++i)
 	{
-		number += v[i] * pow(10, i);
+		number += int(v[i] * pow(10, i));
 	}
 
 	return number;
