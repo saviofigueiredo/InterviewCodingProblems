@@ -1,70 +1,70 @@
+/*
+Let T be a rooted tree. 
+The lowest common ancestor between two nodes n1 and n2 is defined as the lowest node in T that has both n1 and n2 as descendants 
+(where we allow a node to be a descendant of itself).
+Write a method that will receive two keys as parameters and should print the lowest ancestors of those keys.
+
+For example, if the method is called passing 6 and 7, it should print 3
+If the method is called passing 2 and 7, it should print 1.
+
+		1
+      /   \
+     2     3
+   /  \   /  \
+  4    5 6    7
+*/
 #include <iostream>
 
-typedef struct TreeNode
+template <typename T>
+struct Node
 {
-	int data;
+	T data;
 
-	TreeNode* left;
-	TreeNode *right;
-}TreeNode;
+	Node* left;
+	Node *right;
 
-TreeNode* lowestCommonAncestor(TreeNode* root, int n1, int n2)
-{
-	if (root == nullptr)
+	Node(T newData)
 	{
-		return nullptr;
+		data = newData;
+		left = nullptr;
+		right = nullptr;
 	}
 
-	if (root->data > n1 && root->data > n2)
+	Node* lowestCommonAncestor(T n1, T n2)
 	{
-		return lowestCommonAncestor(root->left, n1, n2);
+		if (data > n1 && data > n2 && left != nullptr)
+		{
+			return left->lowestCommonAncestor(n1, n2);
+		}
+		else if (data < n1 && data < n2 && right != nullptr)
+		{
+			return right->lowestCommonAncestor(n1, n2);
+		}
+
+		return this;
 	}
-	else if (root->data < n1 && root->data < n2)
-	{
-		return lowestCommonAncestor(root->right, n1, n2);
-	}
-
-	return root;
-}
-
-TreeNode* newNode(int data)
-{
-	auto node = (TreeNode*)malloc(sizeof(TreeNode));
-
-	node->data = data;
-	node->left = nullptr;
-	node->right = nullptr;
-
-	return node;
-}
-
-/*
-                       20
-			      8         22
-				4   12       
-                   10 14
-*/
+};
 
 int main(int argc, char* argv[])
 {
-	auto root = newNode(20);
-	root->left = newNode(8);
-	root->right = newNode(22);
-	root->left->left = newNode(4);
-	root->left->right = newNode(12);
-	root->left->right->left = newNode(10);
-	root->left->right->right = newNode(14);
+	auto root = new Node<int>(20);
+	root->left = new Node<int>(8);
+	root->right = new Node<int>(22);
+	root->left->left = new Node<int>(4);
+	root->left->right = new Node<int>(12);
+	root->left->right->left = new Node<int>(10);
+	root->left->right->right = new Node<int>(14);
 
 	auto n1 = 10, n2 = 14;
-	auto t = lowestCommonAncestor(root, n1, n2);
+	auto t = root->lowestCommonAncestor(n1, n2);
 	std::cout << "LCA of " << n1 << " and " << n2 << " is " << t->data << std::endl;
 
 	n1 = 14, n2 = 8;
-	t = lowestCommonAncestor(root, n1, n2);
+	t = root->lowestCommonAncestor(n1, n2);
 	std::cout << "LCA of " << n1 << " and " << n2 << " is " << t->data << std::endl;
 
 	n1 = 10, n2 = 22;
-	t = lowestCommonAncestor(root, n1, n2);
+	t = root->lowestCommonAncestor(n1, n2);
 	std::cout << "LCA of " << n1 << " and " << n2 << " is " << t->data << std::endl;
 
 	return EXIT_SUCCESS;

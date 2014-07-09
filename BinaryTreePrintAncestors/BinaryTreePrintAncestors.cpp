@@ -1,51 +1,60 @@
+/*
+Given a Binary Tree and a key, write a function that prints all the ancestors of the key in the given binary tree.
+
+For example, if the given tree is following Binary Tree and key is 4, then your function should print 2 and 1.
+
+		1
+	  /   \
+     2     3
+    /  \
+   4    5
+  /
+ 7
+*/
 #include <iostream>
 
-typedef struct Node
+template <typename T>
+struct Node
 {
 	Node* left;
 	Node* right;
-	int data;
-};
+	T data;
 
-bool printAncestors(Node* root, int data)
-{
-	if (root == nullptr)
+	Node(T newData)
 	{
+		data = newData;
+		left = right = nullptr;
+	}
+
+	bool printAncestors(T key)
+	{
+		if (data == key)
+		{
+			return true;
+		}
+		if (left != nullptr && left->printAncestors(key) || right != nullptr && right->printAncestors(key))
+		{
+			std::cout << data << std::endl;
+			return true;
+		}
+
 		return false;
 	}
-	else if (root->data == data)
-	{
-		return true;
-	}
-	if (printAncestors(root->left, data) || printAncestors(root->right, data))
-	{
-		std::cout << root->data << std::endl;
-		return true;
-	}
-}
-
-Node* newNode(int data)
-{
-	Node* node = new Node;
-	node->data = data;
-	node->left = node->right = nullptr;
-	return (node);
-}
+};
 
 int main(int argc, char* argv[])
 {
-	// Let us create binary tree given in the above example
-	Node * root = newNode(1);
-	root->left = newNode(2);
-	root->right = newNode(3);
-	root->left->left = newNode(4);
-	root->left->right = newNode(5);
-	root->right->left = newNode(6);
-	root->right->right = newNode(7);
-	root->right->left->right = newNode(8);
+	auto root = new Node<int>(1);
+	root->left = new Node<int>(2);
+	root->right = new Node<int>(3);
+	root->left->left = new Node<int>(4);
+	root->left->right = new Node<int>(5);
+	root->right->left = new Node<int>(6);
+	root->right->right = new Node<int>(7);
+	root->right->left->right = new Node<int>(8);
 
-	std::cout << "Nodes at distance 2 are: " << std::endl;
-	printAncestors(root, 7);
+	std::cout << "Nodes at distance 7 are: " << std::endl;
+	root->printAncestors(7);
 
 	return EXIT_SUCCESS;
 }

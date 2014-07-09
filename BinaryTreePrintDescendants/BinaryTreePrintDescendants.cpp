@@ -10,7 +10,6 @@ For example, if the given tree is following Binary Tree and key is 2, then your 
    4    5
   /
  7
-
 */
 #include <iostream>
 #include <stack>
@@ -29,25 +28,25 @@ struct Node
 		left = right = nullptr;
 	}
 
-	void printDescendants(T nodeData, bool print)
+	void printDescendants(T key, bool print)
 	{
 		if (print == true)
 		{
 			std::cout << data << std::endl;
 		}
 
-		if (print == false && data == nodeData)
+		if (print == false && data == key)
 		{
 			print = true;
 		}
 
 		if (left != nullptr)
 		{
-			left->printDescendants(nodeData, print);
+			left->printDescendants(key, print);
 		}
 		if (right != nullptr)
 		{
-			right->printDescendants(nodeData, print);
+			right->printDescendants(key, print);
 		}
 	}
 
