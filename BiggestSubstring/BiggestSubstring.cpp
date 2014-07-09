@@ -14,7 +14,7 @@ int biggestSubstring(std::string s)
 		v[i] = 0;
 	}
 
-	for (int i = 0; i < s.length(); ++i)
+	for (size_t i = 0; i < s.length(); ++i)
 	{
 		if (v[s[i]] == 1)
 		{
@@ -49,4 +49,6 @@ int main(int argc, char* argv[])
 {
 	std::string s = "abcbaaafghijlm";
 	std::cout << biggestSubstring(s) << std::endl;
+
+	return EXIT_SUCCESS;
 }
