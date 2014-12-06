@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReplaceSpacesByPercent20", "ReplaceSpacesByPercent20\ReplaceSpacesByPercent20\ReplaceSpacesByPercent20.vcxproj", "{BDB0A562-68DE-4DC0-BA0B-45AA7776F28B}"
 EndProject
@@ -168,6 +168,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GraphHasCycle", "GraphHasCycle\GraphHasCycle.vcxproj", "{8BB1A420-2B4D-4002-A104-D924C0767129}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GraphIsBipartite", "GraphIsBipartite\GraphIsBipartite.vcxproj", "{4717F253-0C63-47FE-8132-4BE16234670E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LookAndSay", "LookAndSay\LookAndSay.vcxproj", "{66B7FB03-0A70-49DD-BAAB-9E520E3F85D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1009,6 +1011,16 @@ Global
 		{4717F253-0C63-47FE-8132-4BE16234670E}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{4717F253-0C63-47FE-8132-4BE16234670E}.Release|Win32.ActiveCfg = Release|Win32
 		{4717F253-0C63-47FE-8132-4BE16234670E}.Release|Win32.Build.0 = Release|Win32
+		{66B7FB03-0A70-49DD-BAAB-9E520E3F85D3}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{66B7FB03-0A70-49DD-BAAB-9E520E3F85D3}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{66B7FB03-0A70-49DD-BAAB-9E520E3F85D3}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{66B7FB03-0A70-49DD-BAAB-9E520E3F85D3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{66B7FB03-0A70-49DD-BAAB-9E520E3F85D3}.Debug|Win32.Build.0 = Debug|Win32
+		{66B7FB03-0A70-49DD-BAAB-9E520E3F85D3}.Release|Any CPU.ActiveCfg = Release|Win32
+		{66B7FB03-0A70-49DD-BAAB-9E520E3F85D3}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{66B7FB03-0A70-49DD-BAAB-9E520E3F85D3}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{66B7FB03-0A70-49DD-BAAB-9E520E3F85D3}.Release|Win32.ActiveCfg = Release|Win32
+		{66B7FB03-0A70-49DD-BAAB-9E520E3F85D3}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
